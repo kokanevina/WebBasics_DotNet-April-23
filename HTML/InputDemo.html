@@ -17,12 +17,12 @@
             <td><input type="text" value="JAVA" disabled></td>
         </tr>
         <tr>
-            <td><label>Enter First Name:</label></td>
+            <td><label for="firtName">Enter First Name:</label></td>
             <td><input id="firtName" name="myName" minlength="2" pattern="^[A-Za-z]*$" required></td>
         </tr>
         <tr>
             <td><label>Enter Last Name:</label></td>
-            <td><input id="lastName" type="text" name="myName" required></td>
+            <td><input id="lastName" type="text" name="myName" value="patil"  required></td>
         </tr>
         <tr>
             <td>Enter age:</td>
@@ -31,6 +31,38 @@
         <tr>
             <td>Enter Email id:</td>
             <td><input type="email" required></td>
+        </tr>
+        <tr>
+            <td><label>Select Interested Courses</label></td>
+            <td>
+               <input type="checkbox" id="course1" name="course" value="dotnet"> <label for="course1">DotNet</label>
+               <input type="checkbox" id="course2" name="course" value="html"> <label>HTML</label>
+               <input type="checkbox" id="course3" name="course" value="css"> <label>CSS</label>
+                <input type="checkbox" id="course4" name="course" value="javascript"><label>JAVASCRIPT</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Select Interested Trainer</label></td>
+            <td>
+               <input type="checkbox" id="tr1" name="trainer" value="abc"> <label for="course1">abc</label>
+               <input type="checkbox" id="tr2" name="trainer" value="pqr"> <label>pqr</label>
+               <input type="checkbox" id="tr3" name="trainer" value="xyz"> <label>xyz</label>
+                <input type="checkbox" id="tr4" name="trainer" value="lmn"><label>lmn</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Select Gender</label></td>
+            <td>
+                <input type="radio" id="rb1" value="male" name="gender"><label>:MALE</label>
+                <input type="radio" id="rb2" value="female" name="gender"><label>:FEMALE</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Select nationality</label></td>
+            <td>
+                <input type="radio" id="rb3" value="indian" name="nationality"><label>:INDIAN</label>
+                <input type="radio" id="rb4" value="other" name="nationality"><label>:OTHER</label>
+            </td>
         </tr>
         <tr>
             <td>Set username</td>
@@ -50,7 +82,9 @@
         </tr>
     </table>
     <input type="submit" >
+    <input type="reset">
+   
 </form>
-    
+
 </body>
 </html>
