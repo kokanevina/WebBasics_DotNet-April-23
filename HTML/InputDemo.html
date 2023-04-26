@@ -11,32 +11,34 @@
     <form>
     <table>
         <tr>
-            <td><label>Enter First Name:</label></td>
-            <td><input id="firtName" name="myName"></td>
+            <td>Course Name:</td>
+            <td><input type="text" value="JAVA" readonly></td>
+            <td>Course Name:</td>
+            <td><input type="text" value="JAVA" disabled></td>
         </tr>
         <tr>
-            <td>
-                <label>Enter Last Name:</label>
-            </td>
-            <td>
-                <input id="lastName" type="text" name="myName"> 
-            </td>
+            <td><label>Enter First Name:</label></td>
+            <td><input id="firtName" name="myName" minlength="2" pattern="^[A-Za-z]*$" required></td>
+        </tr>
+        <tr>
+            <td><label>Enter Last Name:</label></td>
+            <td><input id="lastName" type="text" name="myName" required></td>
         </tr>
         <tr>
             <td>Enter age:</td>
-            <td><input type="number"></td>
+            <td><input type="number" min="20" max="40"   required></td>
         </tr>
         <tr>
             <td>Enter Email id:</td>
-            <td><input type="email"></td>
+            <td><input type="email" required></td>
         </tr>
         <tr>
-            <td>Enter username</td>
-            <td><input type="text" id="uname"></td>
+            <td>Set username</td>
+            <td><input type="text" id="uname" minlength="4" maxlength="10"  required></td>
         </tr>
         <tr>
-            <td>Enter password:</td>
-            <td><input type="password"></td>
+            <td>Set password:</td>
+            <td><input type="password" pattern="^[A-Za-z0-9]{4,8}$" required></td>
         </tr>
         <tr>
             <td>Enter birthdate</td>
@@ -47,7 +49,7 @@
             <td><input type="color"></td>
         </tr>
     </table>
-    <input type="submit">
+    <input type="submit" >
 </form>
     
 </body>
