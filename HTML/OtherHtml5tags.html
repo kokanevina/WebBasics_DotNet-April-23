@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 tags</title>
+    <style>
+        meter{
+            width: 800px;
+            height: 100px;
+        }
+        canvas
+        {
+            border: 1px solid red;
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
     
@@ -46,8 +57,32 @@
          
             </article>
         </details>
-
     </section>
 </details>
+
+label>Fuel Indicator:</label>
+<meter min="0" low="10" value="30" high="30" max="50"></meter>
+<!--
+        safer zone: 
+        warning zone: 
+-->
+<label>Fuel Indicator:</label>
+<meter min="0" low="10" optimum="31" value="30" high="30" max="50"></meter>
+
+<!-- 
+    when ur optimum value is between high and max then 
+        safer zone: from high to max
+        warning zone: low to <high
+        danger zone : min to <low-->
+
+<canvas height="500" width="500" id="myCanvas">
+
+</canvas>
+<script>
+   let canvasObject= document.getElementById("myCanvas");
+   let context=canvasObject.getContext('2d');
+   context.fillStyle="green";
+   context.fillRect(10,10, 200,100);
+</script>
 </body>
 </html>
