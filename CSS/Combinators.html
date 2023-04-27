@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comibinator</title>
+    <style>
+        /*descendant selector*/
+        #section1 div{
+         color: red;   
+        }
+        /*direct child selector*/
+        #section1>div{
+            background-color: yellow;
+        }
+        /*next matching sibling*/
+        article+p{
+            font-size: 30px;
+        }
+          /*all matching sibling*/
+        article~p{
+            border: 3px solid pink;
+        }
+        tbody>tr:first-child{
+            background-color: aqua;
+        }
+    </style>
+  
+</head>
+<body>
+    <section id="section1">
+        <div>
+            india is my country
+        </div>
+        <div>
+            india is my country
+        </div>
+        <p>
+            hi
+        </p>
+        <article>
+            <div>
+                    All Indians are my brothers and sisters
+            </div>
+        </article>
+       
+        <p>
+            hi
+        </p>
+        <h3>hello</h3>
+        <p>
+            hi
+        </p>
+    </section>
+    <div>
+        I love my country
+    </div>
+    <hr>
+    <section>
+        <div>
+            india is my country
+        </div>
+        <div>
+            india is my country
+        </div>
+        <p>
+            hi
+        </p>
+        <article>
+            <div>
+                    All Indians are my brothers and sisters
+            </div>
+        </article>
+       
+        <p>
+            hi
+        </p>
+        <h3>hello</h3>
+        <p>
+            hi
+        </p>
+    </section>
+
+    <!-- select tr as first child of parent tbody-->
+    <table border="2">
+        <caption style="background-color: yellow;">Time Table</caption>
+       <thead>
+           <tr><th>Day/Period</th><th>9 am to 10 am</th><th>10 am to 11 am</th>
+               <th>11 am to 12 pm</th><th>12 pm to 1pm</th></tr>
+       </thead>
+       <tbody>
+           <tr><th>Mon</th><td>Chem</td><td>Phy</td><td>Maths</td><td rowspan="5">Lunch Break</td></tr>
+           <tr><th>Tues</th><td>Chem</td><td>Maths</td><td>Phy</td></tr>
+           <tr><th>Wed</th><td colspan="3">LAB</td></tr>
+           <tr><th>Thurs</th><td>Chem</td><td>Maths</td><td>Phy</td></tr>
+           <tr><th>Fri</th><td>Chem</td><td colspan="2">Maths</td></tr>
+       </tbody>
+   </table>
+</body>
+</html>
