@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 tags</title>
+</head>
+<body>
+    
+
+   <label>Enter your Name:</label> <input type="text" id="myname" 
+   onblur="uppRes.value=myname.value.toUpperCase()">
+   <label>Name in Uppercase:</label> <output id="uppRes"></output>
+
+   <label>Enter Company Name:</label> <input type="text" id="cname">
+   <button onclick="uppRes2.value=cname.value.toUpperCase()">MAKE UPPERCASE</button>
+   <label>Name in Uppercase:</label> <output id="uppRes2"></output>
+
+<form onsubmit="event.preventDefault(); addRes.value=parseFloat(num1.value)+parseFloat(num2.value)">
+    <input type="number" placeholder="enter number1" id="num1">+
+    <input type="number" placeholder="enter number2" id="num2">
+    <input type="submit" value="ADD">
+    <output id="addRes"></output>
+</form>
+
+
+<h3>Lata Mangeshakar</h3>
+<details>
+    <h3>Lata Mangeshakar</h3>
+    <summary>Know more About her</summary>
+    <section>
+        <p> Mangeshkar, whose voice was the soundtrack to hundreds of Bollywood films, died aged 92 on Sunday.</p>
+       <p>
+        PM Narendra Modi and stars of the entertainment industry attended the funeral, where large crowds gathered to pay their respects.
+        </p>
+        <p>Her extraordinary career spanned more than half a century and she recorded thousands of songs in 36 languages.</p>
+
+        <details>
+            <summary>Know more about her family</summary>
+            <article>
+                <p> Mangeshkar, whose voice was the soundtrack to hundreds of Bollywood films, died aged 92 on Sunday.</p>
+                <p>
+                 PM Narendra Modi and stars of the entertainment industry attended the funeral, where large crowds gathered to pay their respects.
+                 </p>
+                 <p>Her extraordinary career spanned more than half a century and she recorded thousands of songs in 36 languages.</p>
+         
+            </article>
+        </details>
+
+    </section>
+</details>
+</body>
+</html>
