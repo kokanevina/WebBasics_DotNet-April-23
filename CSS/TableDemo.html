@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Demo</title>
+    <link rel="stylesheet" href="mystyles/style.css">
     <style>
         thead{
             background-color: #372A47;
@@ -13,12 +14,31 @@
         th{
             padding: 10px;
         }
-
+        #heading{
+            background-color: red;
+        }
+       
+         #neo{
+            color: blue;
+        } 
+       
+        h3[title]{
+            color: chocolate;
+        }
+        h3.company{
+            color: pink;
+        }
+        h3{
+            color: red;
+        }
+       
     </style>
+    
 </head>
 <body>
-    <section>
-        
+    <section>    
+        <h2 id="heading" style="background-color: yellow;">TABLE DEMO</h2> 
+        <h3 class="company" id="neo" title="hhi">NEOSOFT</h3>
         <table border="1">
             <caption style="background-color: yellow;color: blue;font-size: 30px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; " >Neosoft Employees Info</caption>
             <thead>
