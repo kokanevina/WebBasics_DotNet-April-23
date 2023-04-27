@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Demo</title>
+    <style>
+        thead{
+            background-color: #372A47;
+            color: yellow;
+            font-size: 20px;
+        }
+        th{
+            padding: 10px;
+        }
+
+    </style>
 </head>
 <body>
     <section>
-        <caption>Neosoft Employees Info</caption>
+        
         <table border="1">
+            <caption style="background-color: yellow;color: blue;font-size: 30px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; " >Neosoft Employees Info</caption>
             <thead>
                 <tr><th>ID</th><th>Name</th><th>Department</th></tr>
             </thead>
@@ -27,6 +39,7 @@
     </section>
     <section>
         <table border="2">
+             <caption style="background-color: yellow;">Time Table</caption>
             <thead>
                 <tr><th>Day/Period</th><th>9 am to 10 am</th><th>10 am to 11 am</th>
                     <th>11 am to 12 pm</th><th>12 pm to 1pm</th></tr>
