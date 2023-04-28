@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders</title>
+    <style>
+        section div{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            display: inline-block;
+        }
+        section div:first-child{    
+            border-top-style: solid; /*color and width optional*/
+            border-top-width: 4px;
+            border-top-color:brown;
+
+            border-top: red 6px solid; /*order doesnt matter*/
+            border-bottom: blue 4px double;
+        }
+        section div:nth-child(2){
+            border-style: solid double dashed; /*top, right, bottom, left*/
+            border-width: 4px 10px;  
+            border-color: yellow green;       
+        }
+        section div:nth-child(3){
+            border-style: dashed;
+            border-width: 10px;
+            border-color: green;
+
+            border: 4px green dotted;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            India is my country. All indians are my brothers and sisters.
+            I love  my country
+        </div>
+        <div>
+            India is my country. All indians are my brothers and sisters.
+            I love  my country
+        </div>
+        <div>
+            India is my country. All indians are my brothers and sisters.
+            I love  my country
+        </div>
+        <div>
+            India is my country. All indians are my brothers and sisters.
+            I love  my country
+        </div>
+    </section>
+</body>
+</html>
