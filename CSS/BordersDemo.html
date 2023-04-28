@@ -9,6 +9,7 @@
         section div{
            
             width: 200px;
+            height: 100px;
             background-color: aqua;
             display: inline-block;
         }
@@ -27,13 +28,25 @@
             border-color: yellow green;      
             padding: 20px 10px 0px 30px  ;       /*top right bottom left*/
             margin: 0px 30px 20px 15px;
+            box-shadow: -10px 20px 20px blue; /* ++ +-, -+, -- */
+            text-shadow: 10px 10px 5px;
         }
         section div:nth-child(3){
             border-style: dashed;
             border-width: 10px;
             border-color: green;
             border: 4px green dotted;
-           
+            box-shadow: 10px 20px 20px blue;
+            text-shadow: 10px 10px 2px red;
+        }
+        section div:last-child{
+           margin: 10px;
+           padding: 20px;
+           border-top-right-radius: 20px;
+           border-bottom-left-radius: 30px;
+           border-bottom-right-radius: 50px;
+           border-radius: 10px 20px 30px 40px; /*t-l,t-r,b-r,b-l*/      
+           border-radius: 100%;
         }
     </style>
 </head>
