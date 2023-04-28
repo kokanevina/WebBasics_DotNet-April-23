@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        /*block level elements span 100% of their parents*/
+        /*block level elements span 100% of their parents*/
+        /*parent height depends on children height (contents)*/
+        body{
+            border: 10px solid red;
+        }
+        div{
+          width: 70%;    
+          background-color: yellow;
+          border: 8px solid blue;
+        }
+        div>table{
+            width: 50%;
+            height: 300px;
+        }
+        b,h1{
+            width: 400px;
+            height: 200px;
+            border: 2px solid pink;
+            background-color: blue;
+        }
+        b{
+            display: inline-block;
+        }
+        h1{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <b>Time Table</b>
+    <b>Time Table</b>
+    <h1>Time Table</h1>
+    <h1>Time Table</h1>
+<div>
+ 
+    <table border="2" >
+        <caption>Time Table</caption>
+       <thead>
+           <tr><th>Day/Period</th><th>9 am to 10 am</th><th>10 am to 11 am</th>
+               <th>11 am to 12 pm</th><th>12 pm to 1pm</th></tr>
+       </thead>
+       <tbody>
+           <tr><th>Mon</th><td>Chem</td><td>Phy</td><td>Maths</td><td rowspan="5">Lunch Break</td></tr>
+           <tr><th>Tues</th><td>Chem</td><td>Maths</td><td>Phy</td></tr>
+           <tr><th>Wed</th><td colspan="3">LAB</td></tr>
+           <tr><th>Thurs</th><td>Chem</td><td>Maths</td><td>Phy</td></tr>
+           <tr><th>Fri</th><td>Chem</td><td colspan="2">Maths</td></tr>
+       </tbody>
+   </table>
+</div>
+   <table border="2" id="table2">
+    <caption>Time Table</caption>
+   <thead>
+       <tr><th>Day/Period</th><th>9 am to 10 am</th><th>10 am to 11 am</th>
+           <th>11 am to 12 pm</th><th>12 pm to 1pm</th></tr>
+   </thead>
+   <tbody>
+       <tr><th>Mon</th><td>Chem</td><td>Phy</td><td>Maths</td><td rowspan="5">Lunch Break</td></tr>
+       <tr><th>Tues</th><td>Chem</td><td>Maths</td><td>Phy</td></tr>
+       <tr><th>Wed</th><td colspan="3">LAB</td></tr>
+       <tr><th>Thurs</th><td>Chem</td><td>Maths</td><td>Phy</td></tr>
+       <tr><th>Fri</th><td>Chem</td><td colspan="2">Maths</td></tr>
+   </tbody>
+</table>
+</body>
+</html>
