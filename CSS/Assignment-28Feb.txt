@@ -1,0 +1,4 @@
+Arrange single image in single figure tag with figcaption.
+Repeat it for 5 images
+Now Arrange all figure tags in one line without using table.
+Style Background of Images with good colors, height and width
