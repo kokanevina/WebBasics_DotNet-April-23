@@ -9,49 +9,85 @@
         <meta name="viewport" content="width=device-width,initial-scale=1"> 
         <link  href="mystyles/style.css" rel="stylesheet">
         <link rel="icon" href="../HTML/Images/roses.jpg">
+        <style>
+            ol{
+                height: 200px;
+            }
+            #list1{
+                background-image: linear-gradient(orange,green,pink, blue, red);
+                /*to bottom*/
+            }
+            #list2{
+                background-image: linear-gradient(to right, orange,green,pink, blue, red);
+                /*to left, to right, to top*/
+            }
+            #list3{
+                background-image: linear-gradient(-12deg, orange,green,pink, blue, red);
+            }
+            #list4{
+                background-image: radial-gradient( orange,green,pink, blue, red);
+                /*ellipse*/
+            }
+            #list5{
+                background-image: radial-gradient( circle, orange,green,pink, blue, red);
+            }
+            #list6{
+                background-image: linear-gradient(
+                                        to left,
+                                        lime 10%,
+                                        red 10% 30%,
+                                        cyan 30% 45%,
+                                        yellow 45%
+                                    );;
+            }
+            #list7{
+              /*   background-image: repeating-linear-gradient(yellow, yellow 5px, black 5px, black 10px); */
+                background-image: repeating-linear-gradient(45deg,yellow, yellow 10%, black 10%, black 20%); 
+            }
+        </style>
     </head>
     <body>
         <h1>Drinks</h1>
        <section>
-            <ol>
+            <ol id="list1">
                 <li>Tea</li>
                 <li>Coffee</li>
                 <li>Cold Coffee</li>
                 <li>Lemon Tea</li>
             </ol>
-            <ol type="A" >
+            <ol type="A" id="list2">
                 <li>Tea</li>
                 <li>Coffee</li>
                 <li>Cold Coffee</li>
                 <li>Lemon Tea</li>
             </ol>
-            <ol reversed>
+            <ol reversed id="list3">
                 <li>Tea</li>
                 <li>Coffee</li>
                 <li>Cold Coffee</li>
                 <li>Lemon Tea</li>
             </ol>
-            <ol type="a" reversed>
-                <li>Tea</li>
-                <li>Coffee</li>
-                <li>Cold Coffee</li>
-                <li>Lemon Tea</li>
-            </ol>
-
-            <ol start="3">
-                <li>Tea</li>
-                <li>Coffee</li>
-                <li>Cold Coffee</li>
-                <li>Lemon Tea</li>
-            </ol>
-            <ol start="3" reversed>
+            <ol type="a" reversed id="list4">
                 <li>Tea</li>
                 <li>Coffee</li>
                 <li>Cold Coffee</li>
                 <li>Lemon Tea</li>
             </ol>
 
-            <ol  type="A" start="6" >
+            <ol start="3" id="list5">
+                <li>Tea</li>
+                <li>Coffee</li>
+                <li>Cold Coffee</li>
+                <li>Lemon Tea</li>
+            </ol>
+            <ol start="3" reversed id="list6">
+                <li>Tea</li>
+                <li>Coffee</li>
+                <li>Cold Coffee</li>
+                <li>Lemon Tea</li>
+            </ol>
+
+            <ol  type="A" start="6" id="list7" >
                 <li>Tea</li>
                 <li>Coffee</li>
                 <li>Cold Coffee</li>
