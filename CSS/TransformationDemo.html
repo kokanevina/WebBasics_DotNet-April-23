@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .india{
+            height: 100px;
+            width: 100px;
+            background: greenyellow;
+            border: 3px solid darkgreen;
+            transition: 2s;
+        }
+        #div1:hover{
+            transform: translate(200px,50px); /*translateX, translateY*/
+        }
+        #div2:hover{
+            transform: rotateY(-60deg); /*rotate, rotateX, rotateY */
+        }
+        #div3{
+            margin-left: 200px;
+        }
+        #div3:hover{
+            transform: scale(2);/*scaleX, scaleY, scale*/
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="india" id="div1">
+            India 
+        </div>
+        <div class="india" id="div2">
+            India 
+        </div>
+        <div class="india" id="div3">
+            India 
+        </div>
+        <div class="india" id="div3">
+            India 
+        </div>
+    </section>
+</body>
+</html>
