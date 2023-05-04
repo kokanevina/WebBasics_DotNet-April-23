@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        /*fontsize of span should be half of h1 (parent)*/
+        h1{
+            font-size: 50px;
+        }
+        /*em means (relative to font size of parent element)*/
+        #demo1{
+            font-size: 0.5em;  /*50 * 0.5 = 20px*/
+        }
+        /*rem means (relative to font size of root element)*/
+        #demo2{
+            font-size: 0.5rem /* 20 * 0.5 = 10px*/
+        }
+        p{
+            border: red solid 0.2rem;
+        }
+        img{
+            width: 6rem;
+        }
+    </style>
+</head>
+<body>
+  <section>
+        <h1>Neosoft Technologies <span id="demo1">IT solution</span> <span id="demo2">IT solution</span></h1> <!-- 32px-->
+        <h1>Neosoft Technologies <small>IT solution</small></h1> 
+        <h2>Neosoft Technologies <small>IT solution</small></h2> 
+        <p>hello hi</p>
+        <img src="../HTML/Images/lotus.jpg" alt="">
+  </section>
+</body>
+</html>
