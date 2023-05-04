@@ -9,27 +9,50 @@
             background-color: yellowgreen;
             height: 300px;
             border: 5px solid green;
+            display: flex;    /*direction  is row, veritcal alignment  is stretch */
         }
         div{
             border: 2px solid red;
             background: violet;
         }
-        #section1{
-            display: flex; /*direction  is row, veritcal alignment  is stretch */
+        #section1{  
             flex-direction: row-reverse; /*row, row-reverse, column, column-reverse*/
             justify-content: start; /*horizontal alignment start, end, center, sa, sb, se*/
             align-items: center; /*stretch, start, end*/
         }
         #section2{
             width: 60%;
-            display: flex; /*direction  is row, veritcal alignment  is stretch */
             justify-content: space-around;
             /*By default, flex items will all try to fit onto one line. */
+            flex-direction: row-reverse;
             flex-wrap: wrap-reverse;
+            /*flex flow : short form for  direction and wrap*/
+            flex-flow: row-reverse wrap-reverse;      
             align-items: center; /* row center*/
             align-content: center; /*container (parent) center*/
+            row-gap: 20px;
+            column-gap: 20px;
+            gap: 30px 20px  /*short form for row gap and column gap*/
         }
-       
+       #flexitem4{
+        align-self:flex-start;
+       }
+       /*order is 0 every flex item*/
+       #fi1{
+        order: 3;
+       }
+       #fi2{
+        order: 5;
+       }
+       #fi3{
+        order: 1;
+       }
+       #fi4{
+        order: 2;
+       }
+       #fi5{
+        order: 4;
+       }
     </style>
 </head>
 <body>
@@ -43,7 +66,7 @@
         <div>
             India is my country 3
         </div>
-        <div>
+        <div id="flexitem4">
             India is my country 4
         </div>
         <div>
@@ -81,6 +104,24 @@
         </div>
         <div>
             India is my country 10
+        </div>
+    </section>
+    <hr>
+    <section id="section3">
+        <div id="fi1">
+            India is my country 1
+        </div>
+        <div id="fi2">
+            India is my country 2
+        </div>
+        <div id="fi3">
+            India is my country 3
+        </div>
+        <div id="fi4">
+            India is my country 4
+        </div>
+        <div id="fi5">
+            India is my country 5
         </div>
     </section>
 </body>
