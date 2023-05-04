@@ -19,6 +19,7 @@
         /*relative : elements are positioned according to closest element (parent/ sibling) boundary */
         .nationblock{
             border: 5px solid purple;
+            position: static; /* make it relative and see the change*/
         }
         #block3,#block4{
             border: 2px dashed green;
@@ -32,7 +33,20 @@
             top: 10px;
             left: 10px;
         }
-   </style>
+        /*absolute : elements are positioned according to parent (body / its own parent) element boundary  always*/
+       
+        #in1{
+            background-color: brown;
+            position: absolute;
+            top: 5px;
+        }
+        /*if parent is static and if children is absolute then chidren positioned 
+        according to outer parent
+        if outer parent is static then again its outer parent...... till body*/
+        
+
+        /*fixed positions works always with viewport*/
+  </style>
 </head>
 <body>
     <div class="block" id="block1">
