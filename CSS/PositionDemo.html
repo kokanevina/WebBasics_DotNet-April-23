@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Positions</title>
+    <style>
+        .block{
+            border: 4px solid red;
+            
+        }
+        #block1{
+            margin-left: 10px;
+        }
+        #block2{
+            left: 30px; /* position : static bydefault*/
+            position: relative;  /*relative, absolute, fixed, sticky*/
+        }
+        /*relative : elements are positioned according to closest element (parent/ sibling) boundary */
+        .nationblock{
+            border: 5px solid purple;
+        }
+        #block3,#block4{
+            border: 2px dashed green;
+        }
+        #in1,#in2{
+            border: 2px dotted yellow;
+        }
+        #block4{
+            background-color: darkcyan;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+   </style>
+</head>
+<body>
+    <div class="block" id="block1">
+        India is my country
+    </div>
+    <div class="block" id="block2">
+        India is my country
+    </div>
+    <section class="nationblock">
+        <div id="block3">
+            All Indians are my brothers and sisters
+        </div>
+        <div id="block4">
+            I love my country
+        </div>
+        <b id="in1">All Indians are my brothers and sisters</b>
+        <i id="in2"> I love my country</i>
+    </section>
+</body>
+</html>
