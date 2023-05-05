@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    img{
+        height: 100px;
+        width: 100px;
+    }
+   
+    </style>
+   
+</head>
+<body>
+    <img src="../HTML/Images/roses.jpg" alt="roses" id="roseimg">
+    <button onclick="logic()">change width of image</button>
+
+
+
+    
+    <script>
+        let stateArray=["Maharashtra",'Karnataka','Kerala'];
+        let olNode=document.createElement('ol');
+        for(let i=0;i<stateArray.length;i++){
+            console.log("in loop");
+            let liNode=document.createElement('li');
+            olNode.append(liNode);
+            liNode.textContent=stateArray[i];
+        }
+
+        document.body.append(olNode);
+
+        function logic(){  
+         let imageNode =document.getElementById("roseimg");
+         imageNode.style.width="300px";
+        }
+    </script>
+</body>
+</html>
