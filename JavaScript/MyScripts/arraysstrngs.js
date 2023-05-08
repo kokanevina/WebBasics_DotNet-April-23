@@ -48,3 +48,19 @@ console.log(kidsages2.length); //4 , nonempty array
 
 // sort string array as well as number array
 // reverse array
+let values=[111,12,21,222,33,123,32];
+console.log(values);
+values.reverse();
+console.log("after reverse");
+console.log(values);
+values.sort();  // digit comparision
+console.log("after sort");
+console.log(values);  
+values.sort((a,b)=>a-b); // value comparision
+console.log("after sort");
+console.log(values);
+console.log("after reverse");
+values.reverse();
+console.log(values);
+// arrays mutable : changeable
+
