@@ -1,0 +1,5 @@
+1. Implement Media Query to Display Navbar horizontally for larger screens and stacked for smaller screens
+2. Implement any code to show use of font face rule. Apply beautiful font to ur web page
+3. Implement code to use different icons on web page
+	u can use bootstrap icons or fontawesome
+4. Implement CSS grid system.
