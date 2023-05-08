@@ -91,4 +91,23 @@ else
 else
     console.log("not equal");
 
-// Strings are immutable
+// Strings are immutable : not changeable
+
+let s1="Neosoft";
+let concats=s1.concat(" Technology");
+console.log(s1);
+console.log(concats);
+
+// toUpperCase, toLowerCase, substring
+
+// Answer should be equal
+
+let neoemp3="SurdaS";
+let neoemp4="surDaS";   
+if(neoemp3==neoemp4)
+   console.log("equal");
+else
+   console.log("not equal");
+
+
+   // slice
