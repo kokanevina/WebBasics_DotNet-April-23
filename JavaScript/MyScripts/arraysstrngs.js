@@ -64,3 +64,31 @@ values.reverse();
 console.log(values);
 // arrays mutable : changeable
 
+
+
+
+
+let name2="Vina";  // literals
+
+let name3=new String("Vina");  // new objects
+
+let nation="India is my Country. All Indians are my brothers and sisters";
+console.log(nation.length);
+console.log(nation.charAt(3));
+console.log(nation.indexOf("a"));
+console.log(nation.lastIndexOf("a"));
+console.log(nation.indexOf("Country"));
+let b=nation.startsWith("india");   // endsWith
+if(b)
+    console.log("Yes");
+else
+    console.log("No");
+
+ let neoemp1="Surdas";
+ let neoemp2="surdas";   
+ if(neoemp1==neoemp2)
+    console.log("equal");
+else
+    console.log("not equal");
+
+// Strings are immutable
