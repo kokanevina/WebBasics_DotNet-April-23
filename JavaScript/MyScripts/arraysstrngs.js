@@ -104,10 +104,40 @@ console.log(concats);
 
 let neoemp3="SurdaS";
 let neoemp4="surDaS";   
-if(neoemp3==neoemp4)
+if(neoemp3.toLowerCase()==neoemp4.toLowerCase())
    console.log("equal");
 else
    console.log("not equal");
 
+nation="India is my Country. All Indians are my brothers and sisters";
 
-   // slice
+let ss1=nation.substring(4, 10);
+console.log(ss1);
+let ss2=nation.substring(4);
+console.log(ss2);
+let ss3=nation.substring(-4); // 0
+console.log(ss3);
+let ss4=nation.substring(-4,4); // 0,4
+console.log(ss4);
+let ss5=nation.slice(4, 10);
+console.log(ss5);
+let ss6=nation.slice(4);
+console.log(ss6);
+let ss7=nation.slice(-4); // t, end of string
+console.log(ss7);
+
+let ss8=nation.slice(-4,-10);  // empty 
+console.log(ss8);
+let ss9=nation.slice(-10,-4);  
+console.log(ss9);
+let ss10=nation.slice(3,-4);  
+console.log(ss10);
+
+
+let emps=["Hari",'Pari','Kishan','hirak','Sonali','Hitesh', 'Girish']
+// Display Employees starting with letter H/h from above array
+
+// Display first matching employee whose name ends with i
+
+// Create a function which will take above array as input and returns new array having names 
+//which contain "ri" in their name anywhere

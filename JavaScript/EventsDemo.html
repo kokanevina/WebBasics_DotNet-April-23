@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showAlert()">Shopping</button>
+    <button onclick="showConfirm()">FINISH EXAM</button>
+    <button onclick="showPrompt()">VOTE</button>
+    <script>
+        function showAlert(){
+            window.alert("Hurry UP!!!! SALE ENDING SOON....");
+        }
+        function showConfirm(){
+            let b=window.confirm("Do you really want to FINISH the EXAM????");
+            console.log(b);
+            if(b)
+                window.alert("Your exam Submitted Successfully....");    
+        }
+
+        function showPrompt(){
+            let age=window.prompt("Enter your age");
+            console.log(age);
+            console.log(typeof age);
+            if(age<18)
+                window.alert("SORRY!!!! You are not eligible for voting");
+        }
+    </script>
+</body>
+</html>
