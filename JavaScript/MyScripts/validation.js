@@ -24,8 +24,12 @@ let errorNode2=document.getElementById('error2');
 function validate2(){
     errorNode2.textContent="";
     let lname=lnameNode.value;
+    lnameNode.style.border="2px red solid";
     if(lname==""){
         errorNode2.textContent="Last name is required";
+    }
+    else{
+        lnameNode.style.border="2px green solid";
     }
 }
 
@@ -34,8 +38,15 @@ let errorNode3=document.getElementById('error3');
 function validate3(){
     errorNode3.textContent="";
     let age=ageNode.value;
+    ageNode.style.border="2px red solid";
     if(age==""){
         errorNode3.textContent="Age is required";
+    }
+    else if(age<20 || age>40){
+        errorNode3.textContent="Age must be between 20 to 40";
+    }
+    else{
+        ageNode.style.border="2px green solid";
     }
 }
 let mailNode=document.getElementById('mailId');
@@ -43,8 +54,18 @@ let errorNode4=document.getElementById('error4');
 function validate4(){
     errorNode4.textContent="";
     let email=mailNode.value;
+    mailNode.style.border="2px red solid";
     if(email==""){
         errorNode4.textContent="Email Id is required";
+    }
+    else if(!email.includes('@')){
+        errorNode4.textContent="Please enter valid Email Id";
+    }
+    else if(email.endsWith('@')){
+        errorNode4.textContent="Please enter valid Email Id";
+    }
+    else{
+        mailNode.style.border="2px green solid";
     }
 }
 
