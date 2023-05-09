@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Controls</title>
+  
+</head>
+<body>
+    <b>Text Field</b>
+    <br>
+    <form>
+    <table>
+        <tr>
+            <td>Course Name:</td>
+            <td><input type="text" value="JAVA" readonly></td>
+            <td>Course Name:</td>
+            <td><input type="text" value="JAVA" disabled></td>
+        </tr>
+        <tr>
+            <td><label for="firtName">Enter First Name:</label></td>
+            <td><input id="firtName" name="myName" minlength="2" pattern="^[A-Za-z]*$" required></td>
+        </tr>
+        <tr>
+            <td><label>Enter Last Name:</label></td>
+            <td><input id="lastName" type="text" name="myName" value="patil"  required></td>
+        </tr>
+        <tr>
+            <td>Enter age:</td>
+            <td><input type="number" min="20" max="40"   required></td>
+        </tr>
+        <tr>
+            <td>Enter Email id:</td>
+            <td><input type="email" required></td>
+        </tr>
+        <tr>
+            <td><label>Select Interested Courses</label></td>
+            <td>
+               <input type="checkbox" id="course1" name="course" value="dotnet"> <label for="course1">DotNet</label>
+               <input type="checkbox" id="course2" name="course" value="html"> <label>HTML</label>
+               <input type="checkbox" id="course3" name="course" value="css"> <label>CSS</label>
+                <input type="checkbox" id="course4" name="course" value="javascript"><label>JAVASCRIPT</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Select Interested Trainer</label></td>
+            <td>
+               <input type="checkbox" id="tr1" name="trainer" value="abc"> <label for="course1">abc</label>
+               <input type="checkbox" id="tr2" name="trainer" value="pqr"> <label>pqr</label>
+               <input type="checkbox" id="tr3" name="trainer" value="xyz"> <label>xyz</label>
+                <input type="checkbox" id="tr4" name="trainer" value="lmn"><label>lmn</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Select Gender</label></td>
+            <td>
+                <input type="radio" id="rb1" value="male" name="gender"><label>:MALE</label>
+                <input type="radio" id="rb2" value="female" name="gender"><label>:FEMALE</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Select nationality</label></td>
+            <td>
+                <input type="radio" id="rb3" value="indian" name="nationality"><label>:INDIAN</label>
+                <input type="radio" id="rb4" value="other" name="nationality"><label>:OTHER</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Set username</td>
+            <td><input type="text" id="uname" minlength="4" maxlength="10"  required></td>
+        </tr>
+        <tr>
+            <td>Set password:</td>
+            <td><input type="password" pattern="^[A-Za-z0-9]{4,8}$" required></td>
+        </tr>
+        <tr>
+            <td>Enter birthdate</td>
+            <td><input type="datetime-local"></td>
+        </tr>
+        <tr>
+            <td>Enter color:</td>
+            <td><input type=""></td>
+        </tr>
+        <tr>
+            <td>Select your state:</td>
+            <td> 
+            <select name="mystate" id="state">
+                <option value="mah">Maharashtra</option>
+                <option value="ker">Keral</option>
+                <option value="karn">Karnataka</option>
+                <option value="tamil">Tamilnadu</option>
+                <option value="delhi">Delhi</option>
+            </select>
+            <!-- dropdown list with optgroup-->
+        </td>
+        </tr>
+        <tr>
+            <td>Enter your Suggesstions:</td>
+            <td><textarea name="" id="" rows="10"  cols="30">dhsdjsf</textarea></td>
+        </tr>
+        <tr><td></td><td> <input type="url" placeholder="enter url of ur website"></td></tr>
+    </table>
+    <input type="submit" value="REGISTER" >
+    <input type="image" src="../HTML/Images/roses.jpg" height="50" width="100">
+    <input type="reset">
+   
+</form>
+<script>
+    document.title="FORM DEMO";
+    document.body.style.backgroundColor="gray";
+    let childs=document.body.children;
+    console.log(childs);
+    // by tag name : tr
+    let trNodes=document.getElementsByTagName('tr');
+    console.log(trNodes);
+    for(let i=0;i<trNodes.length;i++){
+       if(i%2==0)
+        trNodes[i].style.backgroundColor="yellow";
+    }
+    // access every input element using tag name and apply background color to only text input elements
+</script>
+</body>
+</html>
