@@ -7,7 +7,11 @@
     <title>CRUD</title>
 </head>
 <body>
-    
+  
+    <p id="parentpara">
+        <i id="india">India is my <sup>Country</sup></i>
+    </p>
+    <button onclick="replace()">REPLACE i with b</button>
     <script>
         let headingNode1=document.createElement('h2');
         headingNode1.textContent="BREAKFAST ITEMS";
@@ -28,6 +32,23 @@
         let headingNode3=document.createElement('h3');
         headingNode3.textContent="Mixed";
         olNode.before(headingNode3);  // siblingnode.before('new sibling node');
+
+        let imgNode=document.createElement('img');
+        imgNode.src="../HTML/Images/tulip.jpg";
+        imgNode.setAttribute("class","myImage");
+        olNode.after(imgNode);
+
+
+        function replace(){
+            let iNode=document.getElementById('india');
+            let content=iNode.innerHTML; // everything from inside i tag along with tags
+            let bNode=document.createElement('b');
+            bNode.innerHTML=content;
+            let para=document.getElementById('parentpara');
+            para.append(bNode);
+            iNode.remove(); 
+        }
+        //innerText == textContent
     </script>
 </body>
 </html>
