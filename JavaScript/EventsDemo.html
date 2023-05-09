@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #tulipimage{
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <button onclick="showAlert()">Shopping</button>
@@ -11,7 +16,11 @@
     <button onclick="showPrompt()">VOTE</button>
     <button id="testbtn">TEST</button>
     <img src="../HTML/Images/roses.jpg" id="rosesimage" alt="roses" height="300" width="400" onmouseover="zoom()">
+   <br>
+    <img src="../HTML/Images/tulip.jpg" id="tulipimage" alt="roses"  ondblclick="zoom2()">
     <!-- Access attributes of a tag. href and target. Display on console when u mouseover on a tag-->   
+    <!-- create div element. Set initial background color and border. Change background color and border of that div
+    when u double click on that element.-->
     <script>
         let buttonNode=document.getElementById("testbtn");
         buttonNode.addEventListener("click",function(){
@@ -49,6 +58,14 @@
             /*short code*/
             imageNode.height=imageNode.height+50;
             imageNode.width+=50;
+        }
+
+        function zoom2(){
+            let imageNode=document.getElementById("tulipimage"); // image element
+             /*setting image size using style properties*/
+           imageNode.style.height="500px";  // styling elements via javascript styling
+           imageNode.style.width="600px";
+           imageNode.style.borderRadius="100%";  //css: border-radius
         }
     </script>
 </body>
