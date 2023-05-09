@@ -59,10 +59,10 @@ function validate4(){
         errorNode4.textContent="Email Id is required";
     }
     else if(!email.includes('@')){
-        errorNode4.textContent="Please enter valid Email Id";
+        errorNode4.textContent="Please enter valid EmailId";
     }
     else if(email.endsWith('@')){
-        errorNode4.textContent="Please enter valid Email Id";
+        errorNode4.textContent="Please enter valid EmailId";
     }
     else{
         mailNode.style.border="2px green solid";
