@@ -20,17 +20,19 @@
             <tr><td></td><td class="error" id="error1"></td></tr>
             <tr>
                 <td><label>Enter Last Name:</label></td>
-                <td><input id="lastName" type="text" name="myName" value="patil"  required></td>
+                <td><input id="lastName" type="text" name="myName" value="patil"  required onblur="validate2()"></td>
             </tr>
             <tr><td></td><td class="error" id="error2"></td></tr>
             <tr>
                 <td>Enter age:</td>
-                <td><input type="number" min="20" max="40"   required></td>
+                <td><input type="number" min="20" max="40" id="age"  required onblur="validate3()"></td>
             </tr>
+            <tr><td></td><td class="error" id="error3"></td></tr>
             <tr>
                 <td>Enter Email id:</td>
-                <td><input type="email" required></td>
+                <td><input type="email" id="mailId" required onblur="validate4()"></td>
             </tr>
+            <tr><td></td><td class="error" id="error4"></td></tr>
             <tr>
                 <td><label>Select Interested Courses</label></td>
                 <td>
@@ -49,12 +51,14 @@
             </tr>
             <tr>
                 <td>Set username</td>
-                <td><input type="text" id="uname" minlength="4" maxlength="10"  required></td>
+                <td><input type="text" id="uname" minlength="4" maxlength="10"  required  onblur="validate5()"></td>
             </tr>
+            <tr><td></td><td class="error" id="error5"></td></tr>
             <tr>
                 <td>Set password:</td>
-                <td><input type="password" pattern="^[A-Za-z0-9]{4,8}$" required></td>
+                <td><input type="password" id="pass" pattern="^[A-Za-z0-9]{4,8}$" required onblur="validate6()"></td>
             </tr>
+            <tr><td></td><td class="error" id="error6"></td></tr>
         </table>
         <input type="submit" value="REGISTER" >
         <input type="reset">
