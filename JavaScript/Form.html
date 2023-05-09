@@ -56,9 +56,14 @@
             <tr><td></td><td class="error" id="error5"></td></tr>
             <tr>
                 <td>Set password:</td>
-                <td><input type="password" id="pass" pattern="^[A-Za-z0-9]{4,8}$" required onblur="validate6()"></td>
+                <td><input type="text" id="pass" pattern="^[A-Za-z0-9]{4,8}$" required onblur="validate6()"></td>
             </tr>
             <tr><td></td><td class="error" id="error6"></td></tr>
+            <tr>
+                <td>Confirm password:</td>
+                <td><input type="text" id="cpass" required onblur="validate7()"></td>
+            </tr>
+            <tr><td></td><td class="error" id="error7"></td></tr>
         </table>
         <input type="submit" value="REGISTER" >
         <input type="reset">

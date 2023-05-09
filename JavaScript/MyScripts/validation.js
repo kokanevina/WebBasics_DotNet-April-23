@@ -74,8 +74,15 @@ let errorNode5=document.getElementById('error5');
 function validate5(){
     errorNode5.textContent="";
     let username=userNode.value;
+    userNode.style.border="2px red solid";
     if(username==""){
         errorNode5.textContent="Username is required";
+    }
+    else if(username.length<4 || username.length>10){
+        errorNode5.textContent="Username must be 4 to 10 characters long";
+    }
+    else{
+        userNode.style.border="2px green solid";
     }
 }
 let passNode=document.getElementById('pass');
@@ -83,7 +90,33 @@ let errorNode6=document.getElementById('error6');
 function validate6(){
     errorNode6.textContent="";
     let password=passNode.value;
+    passNode.style.border="2px red solid";
+    let passPattern= new RegExp("^[A-Za-z0-9]{4,8}$");
     if(password==""){
         errorNode6.textContent="Password is required";
+    }
+    else if(passPattern.test(password)==false){
+        errorNode6.textContent="Password must not contain symbol. should contain alphabets and/or digits. password must be 4 to 8 characters long";
+    }
+    else{
+        passNode.style.border="2px green solid";
+    }
+
+}
+let cpassNode=document.getElementById('cpass');
+let errorNode7=document.getElementById('error7');
+function validate7(){
+    errorNode7.textContent="";
+    let confirmPassword=cpassNode.value;
+    let password=passNode.value;
+    cpassNode.style.border="2px red solid";
+    if(confirmPassword==""){
+        errorNode7.textContent="Confirm Password is required";
+    }
+    else if(confirmPassword!=password){
+        errorNode7.textContent="Confirm Password must match with password";
+    }
+    else{
+        cpassNode.style.border="2px green solid";
     }
 }
