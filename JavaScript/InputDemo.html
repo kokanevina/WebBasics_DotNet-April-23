@@ -36,10 +36,10 @@
         <tr>
             <td><label>Select Interested Courses</label></td>
             <td>
-               <input type="checkbox" id="course1" name="course" value="dotnet"> <label for="course1">DotNet</label>
-               <input type="checkbox" id="course2" name="course" value="html"> <label>HTML</label>
-               <input type="checkbox" id="course3" name="course" value="css"> <label>CSS</label>
-                <input type="checkbox" id="course4" name="course" value="javascript"><label>JAVASCRIPT</label>
+               <input type="checkbox" id="course1" name="course" value="dotnet" onchange="getCourses()"> <label for="course1">DotNet</label>
+               <input type="checkbox" id="course2" name="course" value="html" onchange="getCourses()"> <label>HTML</label>
+               <input type="checkbox" id="course3" name="course" value="css" onchange="getCourses()"> <label>CSS</label>
+                <input type="checkbox" id="course4" name="course" value="javascript" onchange="getCourses()"><label>JAVASCRIPT</label>
             </td>
         </tr>
         <tr>
@@ -54,7 +54,7 @@
         <tr>
             <td><label>Select Gender</label></td>
             <td>
-                <input type="radio" id="rb1" value="male" name="gender"><label>:MALE</label>
+                <input type="radio" id="rb1" value="male" name="gender" ><label>:MALE</label>
                 <input type="radio" id="rb2" value="female" name="gender"><label>:FEMALE</label>
             </td>
         </tr>
@@ -79,7 +79,7 @@
         </tr>
         <tr>
             <td>Enter color:</td>
-            <td><input type=""></td>
+            <td><input type="color"></td>
         </tr>
         <tr>
             <td>Select your state:</td>
@@ -118,6 +118,15 @@
         trNodes[i].style.backgroundColor="yellow";
     }
     // access every input element using tag name and apply background color to only text input elements
+    let checkNodes=document.getElementsByName("course");
+
+  let getCourses=  function(){
+        for(let checkbx of checkNodes){
+            if(checkbx.checked)
+                console.log(checkbx.value);
+        }
+    }
+    // access radio button using getElementsByName. Also display value of checked radio button
 </script>
 </body>
 </html>
