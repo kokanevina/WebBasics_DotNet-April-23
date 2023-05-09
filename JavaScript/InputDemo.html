@@ -7,10 +7,10 @@
   
 </head>
 <body>
-    <b>Text Field</b>
+    <b class="abc">Text Field</b>
     <br>
     <form>
-    <table>
+    <table class="abc">
         <tr>
             <td>Course Name:</td>
             <td><input type="text" value="JAVA" readonly></td>
@@ -117,7 +117,7 @@
        if(i%2==0)
         trNodes[i].style.backgroundColor="yellow";
     }
-    // access every input element using tag name and apply background color to only text input elements
+    
     let checkNodes=document.getElementsByName("course");
 
   let getCourses=  function(){
@@ -126,7 +126,15 @@
                 console.log(checkbx.value);
         }
     }
+
+    let nodes=document.getElementsByClassName('abc');
+
+    console.log(nodes);
+
+    // access every input element using tag name and apply background color to only text input elements
     // access radio button using getElementsByName. Also display value of checked radio button
+
+
 </script>
 </body>
 </html>
