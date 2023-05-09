@@ -37,11 +37,11 @@
         imgNode.src="../HTML/Images/tulip.jpg";
         imgNode.setAttribute("class","myImage");
         olNode.after(imgNode);
-
-
         function replace(){
             let iNode=document.getElementById('india');
             let content=iNode.innerHTML; // everything from inside i tag along with tags
+          /*   let content2=iNode.innerText; 
+            console.log(content2); */
             let bNode=document.createElement('b');
             bNode.innerHTML=content;
             let para=document.getElementById('parentpara');
