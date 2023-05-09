@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <figure>
+    <img src="../HTML/Images/tulip.jpg" alt="" id="slideshow" height="300" width="300">
+    <figcaption id="cap">TULIP</figcaption>
+    </figure>
+    <script>
+        let imgNode=document.getElementById("slideshow");
+        let captionNode=document.getElementById("cap");
+        let imageArray=[
+            {
+                path:"../HTML/Images/lotus.jpg",
+                name:"LOTUS",
+                altMessage:"lotus"
+            },
+            {
+                path:"../HTML/Images/roses.jpg",
+                name:"ROSES",
+                altMessage:"roses"
+            },
+            {
+                path:"../HTML/Images/tulip.jpg",
+                name:"TULIP",
+                altMessage:"tulip"
+            }
+        ]
+        i=0;
+        setInterval(function(){
+            imgNode.src=imageArray[i].path;
+            imgNode.alt=imageArray[i].altMessage;
+            captionNode.textContent=imageArray[i].name;
+            i++;
+            if(i==imageArray.length)
+                i=0;
+        }, 2000);
+    </script>
+</body>
+</html>
