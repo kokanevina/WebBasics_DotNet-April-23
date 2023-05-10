@@ -1,5 +1,8 @@
 let fnameNode=document.getElementById('firstName');
 let errorNode1=document.getElementById('error1');
+
+let commonFlag=0;
+
 function validate1(){
     errorNode1.textContent="";
     let fname=fnameNode.value;
@@ -7,15 +10,19 @@ function validate1(){
     fnameNode.style.border="2px red solid";
     if(fname==""){
         errorNode1.textContent="First name is required";
+        return false;
     }
     else if(fname.length<2){
         errorNode1.textContent="name must contain atleast 2 characters";
+        return false;
     }
     else if(fnamePattern.test(fname)==false){
         errorNode1.textContent="name must have only alphabets";
+        return false;
     }
     else{
         fnameNode.style.border="2px green solid";
+        return true;
     }
 }
 
@@ -83,6 +90,7 @@ function validate5(){
     }
     else{
         userNode.style.border="2px green solid";
+        return true
     }
 }
 let passNode=document.getElementById('pass');
@@ -119,4 +127,21 @@ function validate7(){
     else{
         cpassNode.style.border="2px green solid";
     }
+}
+
+function validateForm(){
+    // test all fields are valid are not
+    // if all fields are valid then return true
+    // else return false
+
+
+    let flag1=validate1();
+    let flag2=validate2();
+    let flag3=validate3();
+    let flag4=validate4();
+    let flag5=validate5();
+    let flag6=validate6();
+    let flag7=validate7();
+
+    return (flag1 && flag2  && flag3 && flag4 && flag5 && flag6 && flag7)
 }
