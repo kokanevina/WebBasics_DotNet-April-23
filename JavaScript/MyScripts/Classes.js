@@ -63,6 +63,9 @@ console.log(stud2.getDetails());
 let stud3=new Student(3,"Om");
 console.log(stud3.getDetails());
 
-// private variables
 // arrow function
 // find, filter, map, reduce methods
+
+//Q. create array of employee ids. Implement user defined method which will take this array as
+//input and returns new array having ids prefixed with string neo
+// example [456,567]==>[neo-456,neo-567]
