@@ -20,9 +20,17 @@
 // selector==> $()
     $(document).ready(function(){
         $("#btn1").click(function(){
-            $('.div').hide(2000, function(){
-               $('.div').show(1000);
-            });
+            let label=$("#btn1").text();
+            if(label=="HIDE"){
+                $('.div').hide(2000, function(){
+                    $("#btn1").text("SHOW");
+                });
+            }
+            else{
+                $('.div').show(1000, function(){
+                    $("#btn1").text("HIDE");
+                });
+            }
         });
     });
 </script>
