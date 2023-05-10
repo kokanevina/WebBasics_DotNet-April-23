@@ -21,26 +21,26 @@
     $(document).ready(function(){
         $("#btn1").click(function(){
             let label=$("#btn1").val();
-            if(label=="HIDE"){
-                $('.div').hide(2000, function(){
-                    $("#btn1").val("SHOW");
+            if(label=="HIDE"){   // FADE IN
+                $('.div').hide(2000, function(){  // fadeIn
+                    $("#btn1").val("SHOW");  // FADE OUT
                 });
             }
             else{
-                $('.div').show(1000, function(){
-                    $("#btn1").val("HIDE");
+                $('.div').show(1000, function(){  // fadeOut
+                    $("#btn1").val("HIDE");  // FADE IN
                 });
             }
         });
         $("button").click(function(){
-            $(".div").toggle(1000);
+            $(".div").toggle(1000);  // fadeToggle
         });
     });
 </script>
 </head>
 <body>
-    <input type="button" class="btn" id="btn1" value="HIDE">
-    <button>TOGGLE (HIDE/SHOW)</button>
+    <input type="button" class="btn" id="btn1" value="HIDE"> <!-- / FADE IN -->
+    <button>TOGGLE (HIDE/SHOW)</button>  <!-- FADE TOGGLE (FADE IN/ FADE OUT)-->
     <div id="div1" class="div">
         India is my country
     </div>
