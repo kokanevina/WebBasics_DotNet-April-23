@@ -34,9 +34,11 @@ function validate2(){
     lnameNode.style.border="2px red solid";
     if(lname==""){
         errorNode2.textContent="Last name is required";
+        return false;
     }
     else{
         lnameNode.style.border="2px green solid";
+        return true;
     }
 }
 
@@ -48,12 +50,15 @@ function validate3(){
     ageNode.style.border="2px red solid";
     if(age==""){
         errorNode3.textContent="Age is required";
+        return false;
     }
     else if(age<20 || age>40){
         errorNode3.textContent="Age must be between 20 to 40";
+        return false;
     }
     else{
         ageNode.style.border="2px green solid";
+        return true
     }
 }
 let mailNode=document.getElementById('mailId');
@@ -64,15 +69,19 @@ function validate4(){
     mailNode.style.border="2px red solid";
     if(email==""){
         errorNode4.textContent="Email Id is required";
+        return false;
     }
     else if(!email.includes('@')){
         errorNode4.textContent="Please enter valid EmailId";
+        return false;
     }
     else if(email.endsWith('@')){
         errorNode4.textContent="Please enter valid EmailId";
+        return false;
     }
     else{
         mailNode.style.border="2px green solid";
+        return true;
     }
 }
 
@@ -84,13 +93,15 @@ function validate5(){
     userNode.style.border="2px red solid";
     if(username==""){
         errorNode5.textContent="Username is required";
+        return false;
     }
     else if(username.length<4 || username.length>10){
         errorNode5.textContent="Username must be 4 to 10 characters long";
+        return false;
     }
     else{
         userNode.style.border="2px green solid";
-        return true
+        return true;
     }
 }
 let passNode=document.getElementById('pass');
@@ -102,12 +113,15 @@ function validate6(){
     let passPattern= new RegExp("^[A-Za-z0-9]{4,8}$");
     if(password==""){
         errorNode6.textContent="Password is required";
+        return false;
     }
     else if(passPattern.test(password)==false){
         errorNode6.textContent="Password must not contain symbol. should contain alphabets and/or digits. password must be 4 to 8 characters long";
+        return false;
     }
     else{
         passNode.style.border="2px green solid";
+        return true;
     }
 
 }
@@ -120,21 +134,21 @@ function validate7(){
     cpassNode.style.border="2px red solid";
     if(confirmPassword==""){
         errorNode7.textContent="Confirm Password is required";
+        return false;
     }
     else if(confirmPassword!=password){
         errorNode7.textContent="Confirm Password must match with password";
+        return false;
     }
     else{
         cpassNode.style.border="2px green solid";
+        return true;
     }
 }
 
+
+let nodeArray=[fnameNode,lnameNode,ageNode,mailNode,userNode,passNode,cpassNode]
 function validateForm(){
-    // test all fields are valid are not
-    // if all fields are valid then return true
-    // else return false
-
-
     let flag1=validate1();
     let flag2=validate2();
     let flag3=validate3();
@@ -142,6 +156,13 @@ function validateForm(){
     let flag5=validate5();
     let flag6=validate6();
     let flag7=validate7();
-
+    let flagArray=[flag1,flag2,flag3,flag4,flag5,flag6,flag7];
+    
+    for(let i=0;i<flagArray.length;i++){
+            if(flagArray[i]==false){
+                nodeArray[i].focus();
+                break;
+            }
+        }
     return (flag1 && flag2  && flag3 && flag4 && flag5 && flag6 && flag7)
 }
