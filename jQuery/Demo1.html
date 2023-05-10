@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            height: 200px;
+            width: 300px;
+            background: yellow;
+            border: 4px solid green;
+        }
+    </style>
+
+    
+<script src="Library/jquery-3.6.4.min.js"></script>
+<script>
+// selector==> $()
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $('.div').hide(6000, function(){
+                window.alert("Divs removed");
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <button class="btn" id="btn1">HIDE</button>
+    <div id="div1" class="div">
+        India is my country
+    </div>
+     <div id="div2" class="div">
+        India is my country
+    </div>
+    <p>hello</p>
+</body>
+</html>
