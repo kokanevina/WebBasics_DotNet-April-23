@@ -9,16 +9,20 @@
 <script src="Library/jquery-3.6.4.min.js"></script>
 <script>
   let myStyle={
-        height:"500px",
-        width:"600px",
+        height:"400px",
+        width:"500px",
         border:'solid 10px red' // non numeric property can not be animated
   }
   $(function(){
     $('#lotusimg').animate(myStyle,3000);
     $('#lotusimg2').mouseover(function(){
-        $('#lotusimg2').animate(myStyle,3000,"linear",function(){
+        $(this).animate(myStyle,3000,"linear",function(){
             window.alert("Animation Done");
         });
+    });
+
+    $('#lotusimg3').mouseover(function(){
+        $('#lotusimg3').css(myStyle);
     });
   });
 </script>
@@ -26,5 +30,6 @@
 <body>
     <img src="../HTML/Images/lotus.jpg" alt="lotus" id="lotusimg">
     <img src="../HTML/Images/lotus.jpg" alt="lotus" id="lotusimg2">
+    <img src="../HTML/Images/lotus.jpg" alt="lotus" id="lotusimg3">
 </body>
 </html>
