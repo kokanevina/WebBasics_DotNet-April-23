@@ -104,6 +104,16 @@ function validate5(){
         return true;
     }
 }
+
+let ulNode=document.createElement('ul');
+let liNode1=document.createElement('li');
+liNode1.innerText="Password must not contain symbol";
+let liNode2=document.createElement('li');
+liNode2.innerText="Password should contain alphabets and/or digits";
+let liNode3=document.createElement('li');
+liNode3.innerText="password must be 4 to 8 characters long";
+ulNode.append(liNode1,liNode2,liNode3);
+
 let passNode=document.getElementById('pass');
 let errorNode6=document.getElementById('error6');
 function validate6(){
@@ -116,7 +126,7 @@ function validate6(){
         return false;
     }
     else if(passPattern.test(password)==false){
-        errorNode6.textContent="Password must not contain symbol. should contain alphabets and/or digits. password must be 4 to 8 characters long";
+        errorNode6.append(ulNode);
         return false;
     }
     else{
@@ -145,9 +155,7 @@ function validate7(){
         return true;
     }
 }
-
-
-let nodeArray=[fnameNode,lnameNode,ageNode,mailNode,userNode,passNode,cpassNode]
+let nodeArray=[fnameNode,lnameNode,ageNode,mailNode,userNode,passNode,cpassNode];
 function validateForm(){
     let flag1=validate1();
     let flag2=validate2();
@@ -157,7 +165,6 @@ function validateForm(){
     let flag6=validate6();
     let flag7=validate7();
     let flagArray=[flag1,flag2,flag3,flag4,flag5,flag6,flag7];
-    
     for(let i=0;i<flagArray.length;i++){
             if(flagArray[i]==false){
                 nodeArray[i].focus();
