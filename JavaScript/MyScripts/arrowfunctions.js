@@ -56,3 +56,16 @@ let sum1=ageArray.reduce((acc,age)=>acc+age,20);
 console.log(sum1);
 
 // forEach
+ageArray.forEach(age=>console.log(age))
+
+ageArray.forEach((age,ind)=>console.log(age+"  "+ind))
+
+ageArray.forEach((age,ind,ref)=>console.log(age+"  "+ind+"  "+ref))
+salaryArray=[45000,23000,12000,67000,34000,78000];
+//Q. filter salaries from above array which are less than 40000 and make sum of salaries of resultant array
+//A.
+let summ=salaryArray.filter(sal=>sal<40000).reduce((acc,sal)=>acc+sal);
+
+//Q. Display sum of square of ages from age array
+
+let res=ageArray.map(age=>age*age).reduce((acc,age)=>acc+age);
