@@ -78,3 +78,10 @@ console.log(stud4.studStandard)
 
 for(let key in stud4)
     console.log(stud4[key]);
+
+// Q. Create Book class and create 5 objects of Book. Store 5 Book objects in Array
+//1. Iterate array using forEach
+//2. Find Java Books using filter
+//3. Find book with id 345 using find
+//4. Make sum of Book prices using reduce
+//5. Double the price of book using map
