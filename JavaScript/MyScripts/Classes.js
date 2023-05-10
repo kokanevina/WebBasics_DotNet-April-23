@@ -1,30 +1,38 @@
 
 class Employee{
-    empId;  // public 
-    empName;
+    #empId;  //private
+    empName;  // bydefault public
     empSalary;
     constructor(){
-        this.empId=11;
+        this.#empId=11;
         this.empName="AA";
         this.empSalary="1000";
         console.log("in constructor");
     }
     getDetails(){
-        return "id:"+this.empId+"  name:"+this.empName+"  salary:"+this.empSalary
+        return "id:"+this.#empId+"  name:"+this.empName+"  salary:"+this.empSalary
     }
     getDetails1(){
-        return `Id:${this.empId} Name:${this.empName} Salary:${this.empSalary}`;
+        return `Id:${this.#empId} Name:${this.empName} Salary:${this.empSalary}`;
+    }
+
+    get eid(){
+        return this.#empId;
+    }
+    set eid(empId){
+        this.#empId=empId;
     }
 }
 let emp1=new Employee(); // default constructor
-console.log(emp1.empId);
-
-emp1.empId=345;
+//console.log(emp1.#empId);
+console.log(emp1.eid);  // get property
+//emp1.#empId=345;
+emp1.eid=345;  // set property
 emp1.empName="Hari";
 emp1.empSalary="78000";
 
-console.log(emp1.empId);
-
+//console.log(emp1.#empId);
+console.log(emp1.eid);
 
 let details=emp1.getDetails();
 console.log(details);
