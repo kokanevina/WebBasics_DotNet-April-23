@@ -69,3 +69,4 @@ console.log(stud3.getDetails());
 //Q. create array of employee ids. Implement user defined method which will take this array as
 //input and returns new array having ids prefixed with string neo
 // example [456,567]==>[neo-456,neo-567]
+
