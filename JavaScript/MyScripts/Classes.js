@@ -70,3 +70,11 @@ console.log(stud3.getDetails());
 //input and returns new array having ids prefixed with string neo
 // example [456,567]==>[neo-456,neo-567]
 
+
+let stud4=new Student(44,'Kiran','3rd');
+console.log(stud4.studId)
+console.log(stud4.studName)
+console.log(stud4.studStandard)
+
+for(let key in stud4)
+    console.log(stud4[key]);
