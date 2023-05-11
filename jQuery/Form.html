@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="regForm"  action="Success.html" novalidate>
+        <table class="abc">
+            <tr>
+                <td><label for="firstName">Enter First Name:</label></td>
+                <td><input id="firstName" name="myName" minlength="2" pattern="^[A-Za-z]*$" required ></td>
+            </tr>
+            <tr><td></td><td class="error" id="error1"></td></tr>
+            <tr>
+                <td><label>Enter Last Name:</label></td>
+                <td><input id="lastName" type="text" name="myName" value="patil"  required ></td>
+            </tr>
+            <tr><td></td><td class="error" id="error2"></td></tr>
+            <tr>
+                <td>Enter age:</td>
+                <td><input type="number" min="20" max="40" id="age"  required ></td>
+            </tr>
+            <tr><td></td><td class="error" id="error3"></td></tr>
+            <tr>
+                <td>Enter Email id:</td>
+                <td><input type="email" id="mailId" required ></td>
+            </tr>
+            <tr><td></td><td class="error" id="error4"></td></tr>
+            <tr>
+                <td><label>Select Interested Courses</label></td>
+                <td>
+                   <input type="checkbox" id="course1" name="course" value="dotnet" > <label for="course1">DotNet</label>
+                   <input type="checkbox" id="course2" name="course" value="html"> <label>HTML</label>
+                   <input type="checkbox" id="course3" name="course" value="css" > <label>CSS</label>
+                    <input type="checkbox" id="course4" name="course" value="javascript"><label>JAVASCRIPT</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select Gender</label></td>
+                <td>
+                    <input type="radio" id="rb1" value="male" name="gender" ><label>:MALE</label>
+                    <input type="radio" id="rb2" value="female" name="gender"><label>:FEMALE</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Set username</td>
+                <td><input type="text" id="uname" minlength="4" maxlength="10"  required  ></td>
+            </tr>
+            <tr><td></td><td class="error" id="error5"></td></tr>
+            <tr>
+                <td>Set password:</td>
+                <td><input type="text" id="pass" pattern="^[A-Za-z0-9]{4,8}$" required ></td>
+            </tr>
+            <tr><td></td><td class="error" id="error6"></td></tr>
+            <tr>
+                <td>Confirm password:</td>
+                <td><input type="text" id="cpass" required ></td>
+            </tr>
+            <tr><td></td><td class="error" id="error7"></td></tr>
+        </table>
+        <input type="submit" value="REGISTER" >
+        <input type="reset">
+    </form>
+    <script src="Library/jquery-3.6.4.min.js"></script>
+    <script src="Library/validation.js"></script>
+</body>
+</html>
