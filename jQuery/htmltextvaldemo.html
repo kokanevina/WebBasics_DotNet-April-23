@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="parentpara">
+        <i id="india">India is my <sup>Country</sup></i>
+    </p>
+    <button class="btn">REPLACE i with b</button>
+    <label for=""> Enter Your Name:</label><input type="text" name="myname" id="myname">
+    <label>Name Entered is :</label><input type="text" name="name" id="ouputname">
+    <p>
+        <label for="">name entered is:</label>
+        <span id="output"></span>
+    </p>
+    <script src="Library/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function(){
+            let bNode=$('<b>'); // new ele created
+            let iNode=$('#india');  // existing ele accessed
+            $('.btn').click(function(){
+                let contents=iNode.html(); 
+                bNode.html(contents);
+                iNode.remove(1000);
+                $('#parentpara').append(bNode);
+            });
+            $('#myname').blur(function(){
+                let name=$(this).val();
+                $('#output').text(name);
+                $('#ouputname').val(name);
+            });
+        });
+    </script>
+</body>
+</html>
