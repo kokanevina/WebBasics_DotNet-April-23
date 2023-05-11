@@ -16,16 +16,18 @@
         let headingNode1=document.createElement('h2');
         headingNode1.textContent="BREAKFAST ITEMS";
         document.body.append(headingNode1);
+
+
         let olNode=document.createElement('ol');
         olNode.setAttribute('id','breakfast');
         document.body.append(olNode);
-
         let itemsArray=['samosa','toast sandwich','poha','pizaa','burger'];
         for(let item of itemsArray){
             let liNode=document.createElement('li');
             liNode.textContent=item;
             olNode.append(liNode);
         }
+        
         let headingNode2=document.createElement('h1');
         headingNode2.textContent="Sai Prasad Hotel";
         document.body.prepend(headingNode2);
