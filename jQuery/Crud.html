@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .heading{
+            color: yellow;
+            background-color: blue;
+        }
+        .hotel{
+            font-style: italic;
+            text-shadow: 5px 5px 4px;
+        }
+    </style>
 </head>
 <body>
     
@@ -35,9 +45,13 @@
         h1Node.text("VIJAY HOTEL");
 
         let h2Node=$('<h2>', attrObject2);
-            h2Node.text("BREAKFAST ITEMS");
+        h2Node.text("BREAKFAST ITEMS");
         $('body').prepend(h1Node,h2Node);
 
+       // h1Node.attr('class','hotel'); // existing classgetting replaced 
+        h1Node.addClass('hotel');  // new class gets added without replacing existing class
+
+        //Q. what is the solution in javascript to add new class in exisiting class list
     </script>
 </body>
 </html>
